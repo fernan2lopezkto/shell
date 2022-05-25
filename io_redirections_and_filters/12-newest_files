@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -t | tail
+find $(ls -t) -type f | head
