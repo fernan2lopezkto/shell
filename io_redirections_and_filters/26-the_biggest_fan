@@ -1,0 +1,2 @@
+#!/bin/bsh
+tail -n+2 | -f1 | sort | uniq -c | sort -rd | rev | cut -d" " -f1 | rev | head -n11
