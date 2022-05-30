@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script is displaying
 CONTADOR=0
 STOP=9
 while [ $STOP -ge $CONTADOR ]
