@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script
+CONTADOR=0
+STOP=9
+until [ $STOP -lt $CONTADOR ]
+do
+  echo "Best School"
+  ((CONTADOR++))
+done
