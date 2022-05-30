@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # this script is displaying
 
-H=0
+H=-1
 while ((12 > H++))
     do
     echo "Hour: $H"
-    MIN=1
+    MIN=0
     while ((59 > MIN++))
     	    do
 	    echo "$MIN"
