@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# :)
+CONTADOR=0
+STOP=9
+while [ $STOP -ge $CONTADOR ]
+    do
+      if [ $CONTADOR -eq 3 ]
+        then
+        echo "bad look"
+      elif [ $CONTADOR -eq 7 ]
+	then 
+	echo "good look"
+      else 
+	echo "Best School"
+      fi
+      ((CONTADOR++))
+   done
