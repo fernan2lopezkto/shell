@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # this script for ls
-
-for i in "./*"; do
-	echo $i | tr " " "\n" | cut -d"-" -f2
-	
-	
+LIST=$(ls -1)
+for i in $LIST; do
+	echo "$i" | cut -d"-" -f2
 done
