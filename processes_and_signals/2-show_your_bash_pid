@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  hi ;)  jeje
+#
+ps -euxf | grep bash
