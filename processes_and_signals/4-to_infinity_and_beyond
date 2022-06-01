@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#  hi ;)  jeje
+#
+CONTADOR=0
+STOP=9
+while [ $STOP -ge $CONTADOR ]
+    do
+ 	  echo "To infinity and beyond"
+	  sleep 2
+	    done
