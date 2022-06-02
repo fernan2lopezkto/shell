@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#  hi ;)  jeje
+#
+echo "$$" > /var/run/myscript.pid
+CONTADOR=0
+STOP=9
+while [ $STOP -ge $CONTADOR ]
+    do
+ 	  echo "To infinity and beyond"
+	  
+	  trap "echo I hate the kill command" 15
+          trap "echo Y U no love me?!" SIGINT
+	  trap "rm -r /var/run/myscript.pid" SIGQUIT SIGTERM
+	    done
