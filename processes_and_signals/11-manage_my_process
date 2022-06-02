@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #  try whit case
+A="/var/run/my_process.pid"
 case $1 in
 	start)
 		./manage_my_process &
@@ -7,12 +8,13 @@ case $1 in
 		echo "manage_my_process started"
 		;;
 	stop)
-                rm --recursive /var/run/my_process.pid
+                rm -f $A
 		pkill -f "./manage_my_process"
 		echo "manage_my_process stopped"
 		;;
 	restart)
-                rm --recursive /var/run/my_process.pid
+                #rm --recursive /var/run/my_process.pid
+		rm -f $A
                 pkill -f "./manage_my_process"
                 ./manage_my_process &
                 echo "$!" >> /var/run/my_process.pid
