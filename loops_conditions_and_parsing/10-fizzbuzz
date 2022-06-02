@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# to file, or not to file
+
+for i {1..10}
+	echo
