@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#  hi ;)  jeje
+#
+CONTADOR=0
+STOP=9
+while [ $STOP -ge $CONTADOR ]
+    do
+ 	  echo "I am alive!" >> /tmp/my_process
+	  sleep 2
+	    done
