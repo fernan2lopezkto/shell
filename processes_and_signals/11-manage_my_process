@@ -7,13 +7,13 @@ case $1 in
 		echo "manage_my_process started"
 		;;
 	stop)
-                rm -r /var/run/my_process.pid
-		pkill -20 -f ./manage_my_process
+                rm -rf /var/run/my_process.pid
+		pkill -20 -f "./manage_my_process"
 		echo "manage_my_process stopped"
 		;;
 	restart)
-                rm -r /var/run/my_process.pid
-                pkill -20 -f ./manage_my_process
+                rm -rf /var/run/my_process.pid
+                pkill -20 -f "./manage_my_process"
                 ./manage_my_process &
                 echo "$!" >> /var/run/my_process.pid
 		echo "manage_my_process restarted"
