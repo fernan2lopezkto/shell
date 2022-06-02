@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 #  try whit case
-A="/var/run/my_process.pid"
+A=/var/run/my_process.pid
 case $1 in
 	start)
 		./manage_my_process &
-		echo "$!" >> /var/run/my_process.pid
+		echo "$!" > /var/run/my_process.pid
 		echo "manage_my_process started"
 		;;
 	stop)
-                rm -f $A
-		pkill -f "./manage_my_process"
+                
+		kill "$( cat "$A" )"
 		echo "manage_my_process stopped"
+		rm -f $A
 		;;
 	restart)
                 #rm --recursive /var/run/my_process.pid
+	#	$A
+		kill "$( cat "$A" )"
 		rm -f $A
-                pkill -f "./manage_my_process"
                 ./manage_my_process &
                 echo "$!" >> /var/run/my_process.pid
 		echo "manage_my_process restarted"
