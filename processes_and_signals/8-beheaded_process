@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  hi ;)  jeje
+#
+pkill -9 -f ./7-highlander
